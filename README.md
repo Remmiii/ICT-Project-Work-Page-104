@@ -9,5 +9,5 @@ A simple program that includes a random number generator (user enters a number f
 
 # 🎬 Preview: 
 <video>
-<source src="https://github.com/Remmiii/ICT-Project-Work-Page-104/blob/main/Preview.mp4">
+<source src="Preview.mp4" type="video/mp4">
 </video>
