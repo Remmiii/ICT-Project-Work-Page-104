@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Work Page 104 | ICT</title>
+    
+    <style>
+        #container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.448);
+        }
+
+        #container1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 450px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            overflow: scroll;
+        }
+
+        #redirect-button {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+        h1 {
+            font-family: Arial;
+            font-size: 36px;
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+        }
+
+        body {
+            font-family: Arial;
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #146CF6, #188AF0, #00B7D8, #00D4B0, #00E54B, #00F800);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .left-aligned {
+            text-align: left;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="container1">
+            <div class="left-aligned">
+                <h1>Explanation</h1>
+                <p>The code is a simple HTML document with CSS and JavaScript code to create a web page that contains
+                    two functionalities: a number generator and a temperature converter.
+                </p>
+                <hr class="form-group">
+                <p>
+                    The CSS code is used to style the web page. Here are the highlights of the CSS code:
+                <ul>
+                    <li>The body has a linear gradient background color that changes from left to right and animates
+                        continuously.</li>
+                    <li>The #container has a fixed width and height, a white background color, a border radius of 20px,
+                        and
+                        a
+                        box shadow. It is also positioned in the center of the screen.</li>
+                    <li>The h1 has a font size of 36px and font family of Arial.</li>
+                    <li>The body and .form-group elements have a font size of 15px and font family of Arial.</li>
+                    <li>The input[type="text"], input[type="number"] elements have a width of 95%, a light gray
+                        background
+                        color, a padding of 10px, a font size of 18px, and a border radius of 20px.</li>
+                    <li>The input[type="submit"] element has a width of 100%, a padding of 10px, a font size of 18px, a
+                        border
+                        radius of 10px, a black background color, a white text color, and a pointer cursor.</li>
+                    <li>The #result element has a margin-top of 20px, a font size of 24px, and font weight of bold.</li>
+                </ul>
+                </p>
+                <hr class="form-group">
+                <p>
+                    The HTML code creates the structure of the web page. Here are the highlights of the HTML code:
+                <ul>
+                    <li>The #container element contains two sections: the number generator and the temperature
+                        converter.
+                    </li>
+                    <li>The number generator section contains a form group with a label and an input element with type
+                        number
+                        that takes a number from 1 to 10. The form group also contains a submit button with an onclick
+                        event
+                        that triggers the checkNumber() function. There is also a #result element that displays the
+                        result
+                        of
+                        the number generator.</li>
+                    <li>The temperature converter section contains two form groups with labels and input elements. One
+                        input
+                        element is of type text and takes a temperature value, and the other input is a select element
+                        with
+                        two
+                        options (Celsius and Fahrenheit). The form group also contains a submit button with an onclick
+                        event
+                        that triggers the convertTemperature() function. There is also a #result element that displays
+                        the
+                        result of the temperature converter.</li>
+                </ul>
+                </p>
+                <hr class="form-group">
+                <p>
+                    The JavaScript code contains two functions: checkNumber() and convertTemperature().
+                <ul>
+                    <li>The checkNumber() function generates a random number between 1 and 10 and compares it with the
+                        number
+                        entered by the user. If the numbers match, a success message is displayed; otherwise, a failure
+                        message
+                        is displayed.</li>
+                    <li>The convertTemperature() function converts the temperature from Celsius to Fahrenheit or vice
+                        versa,
+                        depending on the selected unit. The result is then displayed in the #result element.</li>
+                </ul>
+                </p>
+                <hr class="form-group">
+                <button id="redirect-button">Back</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("redirect-button").addEventListener("click", function () {
+            window.location.href = "main.html";
+        });
+    </script>
+
+</html>

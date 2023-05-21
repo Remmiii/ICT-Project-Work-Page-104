@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Work Page 104 | ICT</title>
+
+  <style>
+    #container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 20px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.448);
+    }
+
+    #container1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 450px;
+      height: 450px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 20px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+      overflow: scroll;
+    }
+
+    #redirect-button {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+
+    h1 {
+      font-family: Arial;
+      font-size: 36px;
+      color: rgb(0, 0, 0);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: Arial;
+      font-size: 28px;
+      color: rgb(0, 0, 0);
+      margin-bottom: 20px;
+    }
+
+    body {
+      font-family: Arial;
+      font-size: 15px;
+      color: rgb(0, 0, 0);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 95%;
+      background-color: rgba(236, 236, 236, 0.956);
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 20px;
+      border: none;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    body {
+      background: linear-gradient(to right, #146CF6, #188AF0, #00B7D8, #00D4B0, #00E54B, #00F800);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="container1">
+      <h1>Number Generator</h1>
+      <div id="number-generator">
+        <div class="form-group">
+          <label for="number">Enter a number from 1 - 10:</label>
+          <input type="number" id="number" min="1" max="10" />
+        </div>
+        <input type="submit" value="Check" onclick="checkNumber()" />
+        <div id="result"></div>
+      </div>
+      <hr class="form-group">
+      <h2>Celsius to Fahrenheit Converter</h2>
+      <div id="converter">
+        <div class="form-group">
+          <label for="temperature">Enter a temperature:</label>
+          <input type="number" id="temperature" />
+        </div>
+        <div class="form-group">
+          <label for="unit">Select a unit:</label>
+          <select id="unit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+          </select>
+        </div>
+        <input type="submit" value="Convert" onclick="convertTemperature()" />
+        <div id="result"></div>
+        <hr class="form-group">
+        <button id="redirect-button">Code Explanation</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+</body>
+
+<script>
+  function checkNumber() {
+    var target = Math.floor(Math.random() * 10) + 1;
+    var number = document.getElementById("number").value;
+    if (number == target) {
+      document.getElementById("result").innerHTML =
+        "Good Work! You entered " + number + " and the target was " + target + ".";
+    } else {
+      document.getElementById("result").innerHTML =
+        "Not Matched! You entered " + number + " and the target was " + target + ".";
+    }
+  }
+  function convertTemperature() {
+    var temperature = document.getElementById("temperature").value;
+    var unit = document.getElementById("unit").value;
+    if (unit === "celsius") {
+      var result = temperature * 9 / 5 + 32;
+      document.getElementById("result").innerHTML =
+        temperature + "&#8451; is equivalent to " + result + "&#8457;.";
+    } else {
+      var result = (temperature - 32) * 5 / 9;
+      document.getElementById("result").innerHTML =
+        temperature + "&#8457; is equivalent to " + result + "&#8451;.";
+    }
+  }
+
+  document.getElementById("redirect-button").addEventListener("click", function () {
+    window.location.href = "explanation.html";
+  });
+</script>
+
+</html>
