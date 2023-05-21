@@ -8,4 +8,4 @@ A simple program that includes a random number generator (user enters a number f
 3. Make sure you star this repo!
 
 # 🎬 Preview: 
-![Preview](https://github.com/Remmiii/ICT-Project-Work-Page-104/blob/main/Preview.mp4)
+![Preview not loaded yet!](https://github.com/Remmiii/ICT-Project-Work-Page-104/blob/main/Preview.mp4)
